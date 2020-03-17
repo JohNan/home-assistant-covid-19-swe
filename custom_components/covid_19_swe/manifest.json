@@ -1,0 +1,11 @@
+{
+  "domain": "covid_19_swe",
+  "name": "COVID-19 Sweden",
+  "config_flow": true,
+  "documentation": "https://github.com/JohNan/home-assistant-covid-19-swe",
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": ["@JohNan"]
+}

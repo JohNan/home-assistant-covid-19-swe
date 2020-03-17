@@ -1,0 +1,16 @@
+{
+  "config": {
+    "title": "COVID-19 Sweden",
+    "step": {
+      "user": {
+        "title": "Pick a region to monitor",
+        "data": {
+          "region": "Region"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This region is already configured."
+    }
+  }
+}
