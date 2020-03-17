@@ -1,5 +1,5 @@
 {
   "name": "Integration to fetch regional COVID-19 cases in Sweden",
   "domains": ["sensor"],
-  "country": "SV"
+  "country": "SE"
 }
