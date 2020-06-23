@@ -1,5 +1,7 @@
 {
   "name": "COVID-19 cases in Sweden",
   "domains": ["sensor"],
-  "country": "SE"
+  "country": "SE",
+  "zip_release": true,
+  "filename": "covid-19-swe.zip"
 }
