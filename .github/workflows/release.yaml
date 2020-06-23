@@ -16,14 +16,14 @@ jobs:
 
       - name: Create zip
         run: |
-          cd custom_components/covid-19-swe
+          cd custom_components/covid_19_swe
           zip covid-19-swe.zip -r ./
       - name: Upload zip to release
         uses: svenstaro/upload-release-action@v1-release
 
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./custom_components/covid-19-swe/covid-19-swe.zip
+          file: ./custom_components/covid_19_swe/covid-19-swe.zip
           asset_name: covid-19-swe.zip
           tag: ${{ github.ref }}
           overwrite: true
