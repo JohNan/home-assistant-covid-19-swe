@@ -1,16 +1,16 @@
 {
-    "config": {
-        "abort": {
-            "already_configured": "This region is already configured."
+  "title": "COVID-19 Sweden",
+  "config": {
+    "abort": {
+      "already_configured": "This region is already configured."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "region": "Region"
         },
-        "step": {
-            "user": {
-                "data": {
-                    "region": "Region"
-                },
-                "title": "Pick a region to monitor"
-            }
-        },
-        "title": "COVID-19 Sweden"
+        "title": "Pick a region to monitor"
+      }
     }
+  }
 }
