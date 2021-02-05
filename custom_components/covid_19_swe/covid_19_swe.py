@@ -10,8 +10,8 @@ import logging
 class SweRegion:
     """Class for holding country stats."""
 
-    URL = "https://www.svt.se/special/articledata/2322/folkhalsomyndigheten.json"
-    NAME = "SVT Datajournalistik"
+    URL = "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/0/query?f=geojson&where=Region%20%3C%3E%20%27dummy%27&returnGeometry=false&outFields=*"
+    NAME = "Folkhälsomyndigheten"
 
     id: str
     region: str
@@ -22,11 +22,11 @@ class SweRegion:
     @staticmethod
     def from_json(item):
         return SweRegion(
-            id=item["kod"],
-            region=item["region"],
-            confirmed=item["fall"],
-            deaths=item["avlidna"],
-            updated=datetime.fromtimestamp(item["ts"] / 1000),
+            id=item["OBJECTID"],
+            region=item["Region"],
+            confirmed=item["Totalt_antal_fall"],
+            deaths=item["Totalt_antal_avlidna"],
+            updated=datetime.now(),
         )
 
 
@@ -36,11 +36,9 @@ async def get_cases(session: ClientSession, *, source=SweRegion):
     data = await resp.json(content_type=None)
 
     results = []
-
-    for item in data:
+    for item in data['features']:
         try:
-            if item['days'] is 0:
-                results.append(source.from_json(item))
+            results.append(source.from_json(item['properties']))
         except KeyError:
             logging.getLogger(__name__).warning("Got wrong data: %s", item)
 
