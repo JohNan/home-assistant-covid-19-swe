@@ -7,5 +7,7 @@
   "zeroconf": [],
   "homekit": {},
   "dependencies": [],
-  "codeowners": ["@JohNan"]
+  "codeowners": ["@JohNan"],
+  "version": "1.0.5",
+  "iot_class": "cloud_pulling"
 }
