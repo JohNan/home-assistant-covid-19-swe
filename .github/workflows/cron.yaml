@@ -20,3 +20,7 @@ jobs:
 
       - name: Hassfest validation
         uses: home-assistant/actions/hassfest@master
+        with:
+          ignore: brands
+          category: integration
+          comment: True
