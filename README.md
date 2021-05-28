@@ -3,7 +3,7 @@
 
 Integration to fetch regional COVID-19 cases in Sweden
 
-Data is provided by [SVT.se](https://www.svt.se/datajournalistik/har-sprider-sig-coronaviruset/)
+Data is provided by [Folkhalsomyndigheten](https://www.folkhalsomyndigheten.se/)
 
 ## Configuration
 
