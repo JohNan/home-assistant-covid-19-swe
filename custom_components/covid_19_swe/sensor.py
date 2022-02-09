@@ -66,7 +66,7 @@ class Covid19SweSensor(Entity):
         return "people"
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return device attributes."""
         return {ATTR_ATTRIBUTION: ATTRIBUTION}
 
